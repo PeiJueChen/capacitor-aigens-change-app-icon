@@ -18,6 +18,7 @@ public class ChangeAppIconPlugin: CAPPlugin {
 
     @objc func changeAppIcon(_ call: CAPPluginCall) {
         let name = call.getString("name")
+        print("icon name change to:\(name)")
         implementation.changeAppIcon(name, call);
         
     }
