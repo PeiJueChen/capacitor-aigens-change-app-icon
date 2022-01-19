@@ -15,4 +15,11 @@ public class ChangeAppIconPlugin: CAPPlugin {
             "value": implementation.echo(value)
         ])
     }
+
+    @objc func changeAppIcon(_ call: CAPPluginCall) {
+        let name = call.getString("name")
+        implementation.changeAppIcon(name, call);
+        
+    }
+    
 }

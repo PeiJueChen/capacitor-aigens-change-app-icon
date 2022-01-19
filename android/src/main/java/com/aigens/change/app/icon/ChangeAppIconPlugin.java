@@ -14,9 +14,13 @@ public class ChangeAppIconPlugin extends Plugin {
     @PluginMethod
     public void echo(PluginCall call) {
         String value = call.getString("value");
-
         JSObject ret = new JSObject();
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void changeAppIcon(PluginCall call) {
+        implementation.changeAppIcon(call, this.getActivity().getBaseContext(), this.getActivity().getPackageManager());
     }
 }

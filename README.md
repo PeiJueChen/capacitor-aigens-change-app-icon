@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`changeAppIcon(...)`](#changeappicon)
 
 </docgen-index>
 
@@ -34,4 +35,27 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 
 --------------------
 
+
+### changeAppIcon(...)
+
+```typescript
+changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name: string; allNames: string[]; }>
+```
+
+| Param         | Type                                               |
+| ------------- | -------------------------------------------------- |
+| **`options`** | <code>{ name: string; allNames: string[]; }</code> |
+
+**Returns:** <code>Promise&lt;{ name: string; allNames: string[]; }&gt;</code>
+
+--------------------
+
 </docgen-api>
+
+
+### USE 
+
+```typescript
+
+
+```

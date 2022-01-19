@@ -7,4 +7,8 @@ export class ChangeAppIconWeb extends WebPlugin implements ChangeAppIconPlugin {
     console.log('ECHO', options);
     return options;
   }
+  async changeAppIcon(options: { name: string, allNames: string[] }): Promise<{ name: string, allNames: string[] }> {
+    console.warn('Only native works ', options);
+    return options;
+  }
 }
