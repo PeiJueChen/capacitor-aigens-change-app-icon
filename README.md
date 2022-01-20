@@ -1,6 +1,7 @@
 # capacitor-aigens-change-app-icon
 
-``for Capacitor V3``
+``for Capacitor V2``
+* Capacitor, Please download 3.x.x version
   
 capacitor plugin: help you change app icon dynamically.
 
@@ -56,10 +57,11 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
 
 ### USE 
 
-* this capacitor v3 plugin
+* this capacitor v2 plugin
 
 ```typescript
-    import { ChangeAppIcon } from "capacitor-aigens-change-app-icon";
+    import { Capacitor, Plugins } from '@capacitor/core';
+    const { ChangeAppIconPlugin } = Plugins;
     const allNames = [
       'com.xx.xxx.app.MainActivity',  //main
       'com.xx.xxx.app.1Activity', 
@@ -76,7 +78,7 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
     //     name: isIos ? 'main' : 'com.xx.xxx.app.MainActivity'
     //     allNames,
     // }
-    ChangeAppIcon.changeAppIcon(p);
+    ChangeAppIconPlugin.changeAppIcon(p);
 
 ```
 

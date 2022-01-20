@@ -1,8 +1,15 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { ChangeAppIconPlugin } from './definitions';
+import { ChangeAppIconPlugin } from './definitions';
 
 export class ChangeAppIconWeb extends WebPlugin implements ChangeAppIconPlugin {
+  constructor() {
+    super({
+      name: 'ChangeAppIcon',
+      platforms: ['web'],
+    });
+  }
+
   async echo(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
     return options;
@@ -12,3 +19,11 @@ export class ChangeAppIconWeb extends WebPlugin implements ChangeAppIconPlugin {
     return options;
   }
 }
+
+
+const ChangeAppIcon = new ChangeAppIconWeb();
+
+export { ChangeAppIcon };
+
+import { registerWebPlugin } from '@capacitor/core';
+registerWebPlugin(ChangeAppIcon);
