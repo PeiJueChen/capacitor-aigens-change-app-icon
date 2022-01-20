@@ -50,7 +50,7 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
 | **`options`** | <code>{ name: string; allNames: string[]; }</code> |
 
 **Returns:** <code>Promise&lt;{ name: string; allNames: string[]; }&gt;</code>
-
+allNames: for android
 --------------------
 
 </docgen-api>
@@ -61,13 +61,14 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
 
 ```typescript
     import { Capacitor, Plugins } from '@capacitor/core';
-    const { ChangeAppIconPlugin } = Plugins;
+    const { ChangeAppIcon } = Plugins;
     const allNames = [
       'com.xx.xxx.app.MainActivity',  //main
       'com.xx.xxx.app.1Activity', 
       'com.xx.xxx.app.2tivity',
     ]
     const isIos = Capacitor.getPlatform() == 'ios';
+    
     const p = {
         name: isIos ? 'xx' : 'com.xx.xxx.app.1Activity'
         allNames,
@@ -78,7 +79,7 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
     //     name: isIos ? 'main' : 'com.xx.xxx.app.MainActivity'
     //     allNames,
     // }
-    ChangeAppIconPlugin.changeAppIcon(p);
+    ChangeAppIcon.changeAppIcon(p);
 
 ```
 
@@ -118,6 +119,10 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
       </intent-filter>
     </activity-alias>
 
+
+2. at your MainActivity
+add class:
+add(com.aigens.change.app.icon.ChangeAppIcon.class);
 ```
 
 ```plist
@@ -131,15 +136,15 @@ at your app info.plist, add
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-                    <string>1-icon</string>
+          <string>1-icon</string>
 					<string>1-icon-20</string>
-                    <string>1-icon-29</string>
-                    <string>1-icon-30</string>
-                    <string>1-icon-40</string>
-                    <string>1-icon-60</string>
-                    <string>1-icon-76</string>
-                    <string>1-icon-83.5</string>
-                    <string>1-icon-1024</string>
+          <string>1-icon-29</string>
+          <string>1-icon-30</string>
+          <string>1-icon-40</string>
+          <string>1-icon-60</string>
+          <string>1-icon-76</string>
+          <string>1-icon-83.5</string>
+          <string>1-icon-1024</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -168,3 +173,11 @@ at your app info.plist, add
 	</dict>
 
 ```
+
+### assets
+* android
+> At your mipmap-xx , add your assets
+
+* ios
+> In the project folder, add your assets , keep the same name as filled in plist, omit @xx.. 
+
