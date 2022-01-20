@@ -34,9 +34,10 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ value: string; }</code> |
 
-**Returns:** <code>Promise&lt; { value: string; }&gt; </code>
+**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
 --------------------
+
 
 ### changeAppIcon(...)
 
@@ -44,15 +45,14 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name: string; allNames: string[]; }>
 ```
 
-| Param         | Type                                               |
-| ------------- | -------------------------------------------------- |
-| **`options`** | <code>{ name: string; allNames: string[]; }</code> |
+| Param         | Type                                               | Description                                           |
+| ------------- | -------------------------------------------------- | ----------------------------------------------------- |
+| **`options`** | <code>{ name: string; allNames: string[]; }</code> | name: Your wanna change to xxx, allNames: for android |
 
-**Returns:** <code>Promise&lt; { name: string; allNames: string[]; }&gt; </code>
+**Returns:** <code>Promise&lt;{ name: string; allNames: string[]; }&gt;</code>
 
 --------------------
 
-allNames: for android
 </docgen-api>
 
 ### USE 
