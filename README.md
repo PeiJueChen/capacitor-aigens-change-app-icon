@@ -1,7 +1,9 @@
 # capacitor-aigens-change-app-icon
 
-``for Capacitor V3``
+` `for Capacitor V3` `
+* Capacitor v2, Please download 2.x.x version
   
+
 capacitor plugin: help you change app icon dynamically.
 
 ## Install
@@ -33,10 +35,9 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ value: string; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt; { value: string; }&gt; </code>
 
 --------------------
-
 
 ### changeAppIcon(...)
 
@@ -48,7 +49,7 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
 | ------------- | -------------------------------------------------- |
 | **`options`** | <code>{ name: string; allNames: string[]; }</code> |
 
-**Returns:** <code>Promise&lt;{ name: string; allNames: string[]; }&gt;</code>
+**Returns:** <code>Promise&lt; { name: string; allNames: string[]; }&gt; </code>
 
 --------------------
 
@@ -129,15 +130,15 @@ at your app info.plist, add
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-                    <string>1-icon</string>
+          <string>1-icon</string>
 					<string>1-icon-20</string>
-                    <string>1-icon-29</string>
-                    <string>1-icon-30</string>
-                    <string>1-icon-40</string>
-                    <string>1-icon-60</string>
-                    <string>1-icon-76</string>
-                    <string>1-icon-83.5</string>
-                    <string>1-icon-1024</string>
+          <string>1-icon-29</string>
+          <string>1-icon-30</string>
+          <string>1-icon-40</string>
+          <string>1-icon-60</string>
+          <string>1-icon-76</string>
+          <string>1-icon-83.5</string>
+          <string>1-icon-1024</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
