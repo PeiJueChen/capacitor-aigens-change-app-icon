@@ -1,6 +1,7 @@
 # capacitor-aigens-change-app-icon
 
-` `for Capacitor V3` `
+` ` for Capacitor V3 ` `
+
 * Capacitor v2, Please download 2.x.x version
   
 
@@ -50,7 +51,7 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
 | **`options`** | <code>{ name: string; allNames: string[]; }</code> |
 
 **Returns:** <code>Promise&lt; { name: string; allNames: string[]; }&gt; </code>
-
+allNames: for android
 --------------------
 
 </docgen-api>
@@ -117,6 +118,10 @@ changeAppIcon(options: { name: string; allNames: string[]; }) => Promise<{ name:
       </intent-filter>
     </activity-alias>
 
+2. at your MainActivity
+add class:
+add(com.aigens.change.app.icon.ChangeAppIcon.class);
+
 ```
 
 ```plist
@@ -167,3 +172,13 @@ at your app info.plist, add
 	</dict>
 
 ```
+
+### assets
+
+* android
+
+> At your mipmap-xx , add your assets
+
+* ios
+
+> In the project folder, add your assets , keep the same name as filled in plist, omit @xx.. 
