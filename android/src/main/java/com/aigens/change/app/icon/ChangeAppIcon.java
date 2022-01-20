@@ -30,7 +30,7 @@ public class ChangeAppIcon {
         this.mPackageManager = mPackageManager;
         List<String> names = null;
         try {
-            names = call.getArray("names").toList();
+            names = call.getArray("allNames").toList();
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -39,14 +39,13 @@ public class ChangeAppIcon {
             return;
         }
 
-        ComponentName targetComponentName = new ComponentName(baseContex, name);
-
         for (String i : names) {
             if (!i.equals(name)) {
                 ComponentName componentName = new ComponentName(baseContex, i);
                 disableComponent(componentName);
             }
         }
+        ComponentName targetComponentName = new ComponentName(baseContex, name);
         enableComponent(targetComponentName);
     }
 
