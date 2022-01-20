@@ -3,7 +3,7 @@
 
 ``for Capacitor V2``
 
-* Capacitor v3, Please download 3.x.x version
+* If Capacitor v3, Please download 3.x.x version
 * native code can check [ios](https://github.com/PeiJueChen/changeAppIcon-ios) / [android](https://github.com/PeiJueChen/changeAppIcon-android)
 
 ## Install
