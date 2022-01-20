@@ -1,7 +1,7 @@
 # capacitor-aigens-change-app-icon
 
 ``for Capacitor V2``
-* Capacitor, Please download 3.x.x version
+* Capacitor v3, Please download 3.x.x version
   
 capacitor plugin: help you change app icon dynamically.
 
