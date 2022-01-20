@@ -1,9 +1,10 @@
 # capacitor-aigens-change-app-icon
+> capacitor plugin: help you change app icon dynamically.
 
 ``for Capacitor V2``
+
 * Capacitor v3, Please download 3.x.x version
-  
-capacitor plugin: help you change app icon dynamically.
+* native code can check [ios](https://github.com/PeiJueChen/changeAppIcon-ios) / [android](https://github.com/PeiJueChen/changeAppIcon-android)
 
 ## Install
 
